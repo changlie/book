@@ -1,0 +1,10 @@
+# 自定义函数
+示例
+```js
+add(num1, num2) {
+    res = num1 + num2
+    return res
+}
+c = add(3*3, 4*4)
+println("result:", add(5, 9), c)
+```

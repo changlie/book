@@ -1,0 +1,12 @@
+rows = [
+{name:"changlie", age:18},
+{name:"philip", age:30},
+{name:"baby", age:1}
+]
+
+forv row : rows {
+    name = row.name
+    age = row.age
+    line = `this age of student ${name} is ${age}`
+    println(line)
+}
