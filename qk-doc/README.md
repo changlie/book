@@ -10,5 +10,8 @@ Quick 是一门用于处理数据的工具性脚本语言
 - 文本文件
 - 网络
 
+### 源码
+[github](https://github.com/NextCodeX/qk)   [码云](https://gitee.com/qk-x/quick)
+
 
 
