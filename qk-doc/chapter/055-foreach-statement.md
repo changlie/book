@@ -1,17 +1,4 @@
-# 循环遍历
-## for 循环
-```js
-println("demo1 ================")
-for a = 0; a < 5; a++ {
-    println("current value:", a)
-}
-
-println("demo2 ================")
-arr = [1, false, true, 3.14, "changlie"]
-for a = 0 ; a < arr.size(); a++ {
-    println("current value:", arr[a])
-}
-```
+# foreach 遍历
 
 ## foreach 键值遍历
 ```js

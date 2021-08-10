@@ -8,7 +8,7 @@ Quick语法以简单实用为主
 
 
 ### 编码
-强烈建议使用 UTF-8 编码，所有字符串都是 unicode 字符串。
+强烈建议使用 UTF-8 编码，所有字符串都应是 unicode 字符串。
 
 ### 标识符
 第一个字符必须是字母表中字母或下划线 `_`。  
@@ -18,7 +18,10 @@ Quick语法以简单实用为主
 ### 保留字
 保留字即关键字，我们不能把它们用作任何标识符名称。
 ```
-for, foreach, fori, forv, if, return, break, continue, true, false
+fn, this, 
+for, foreach, fori, forv, if, switch,
+retIf, return, break, continue, 
+true, false, null
 ```
 
 ### 注释

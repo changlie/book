@@ -1,11 +1,6 @@
-# JSON对象类型
+# JSON Object
 
-## 常用方法
-| 方法 |	描述   |
-|  ----  | ----  |
-|  size()       | 键值对数量  |
-|  remove(key)  | 根据指定键移除键值对  |
-|  contain(key)  |  判断是否包含相应键 |
+JSON Object功能基本与js一致。
 
 ```js
 color = "strawberry"
@@ -49,3 +44,10 @@ obj.age = 18 // way 2
 obj["addr"] = "sz" // way 3
 println(obj)
 ```
+
+## JSON Object 方法
+| 方法 |	描述   |
+|  ----  | ----  |
+|  size()       | 键值对数量  |
+|  remove(key)  | 根据指定键移除键值对  |
+|  contain(key))  |  判断是否包含相应键 |
