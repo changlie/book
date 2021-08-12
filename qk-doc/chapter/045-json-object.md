@@ -2,48 +2,78 @@
 
 JSON Object功能基本与js一致。
 
-```js
-color = "strawberry"
 
-// 初始化
+### 初始化
+```js
+// way 1
+obj = {}
+
+// way 2
+obj = {name:"tom", age: 88}
+
+// way 3
+color = "strawberry"
 obj = {
     name: "car",
     special: "carry",
     food: "oil",
     colors: ["red", color, "black"]
 }
-
-color = "gray"
-println("after change color value:", color)
-
-printf("size: %v, values: %v \n", obj.size(), obj)
-
-// 新增键值对
-obj.weight = 998
-obj.isNew = false
-printf("size: %v, values: %v \n", obj.size(), obj)
-
-// 移除键值对
-obj.remove("special")
-printf("size: %v, values: %v \n", obj.size(), obj)
-
-println("contain name:", obj.contain("name"))
-println("contain special:", obj.contain("special"))
-
-list = obj.colors
-println("arr vals:", list, list.size())
-println("arr value:", list[1])
 ```
 
-## 新增键值对
+### 键值数量获取
+```js
+obj = {name:"tom", age: 88}
+println(obj.size()) // 2
+```
+
+### 键值添加
 ```js
 obj = {}
-k = "name"
-obj[k] = "changlie" // way 1
-obj.age = 18 // way 2
-obj["addr"] = "sz" // way 3
-println(obj)
+// way 1
+obj["name"] = "jerry"
+// way 2
+obj.age = 3
+println(obj) // {"name":"jerry", "age":3}
 ```
+
+### 值修改
+```js
+obj = {"name":"jerry", "age":3}
+// way 1
+obj["name"] = "tom"
+// way 2
+obj.age = 18
+println(obj) // {"name":"tom", "age":18}
+```
+
+### 键值删除
+```js
+obj = {name:"tom", age: 88}
+obj.remove("age")
+println(obj) // {"name":"tom"}
+```
+
+### 判断是否包含相应键
+```js
+obj = {name:"tom", age: 88}
+println(obj.contain("name")) // true
+println(obj.contain("addr")) // false
+```
+
+### 遍历
+```js
+obj = {name:"tom", age: 88}
+foreach k, v : obj {
+    println(k, v)
+}
+```
+输出
+```
+age 88
+name tom
+```
+
 
 ## JSON Object 方法
 | 方法 |	描述   |

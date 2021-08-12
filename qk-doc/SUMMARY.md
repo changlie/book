@@ -23,9 +23,14 @@
 * [文件操作](chapter/090-file.md)
 * [日期时间](chapter/150-date-time.md)
 * [Excel操作](chapter/200-excel.md)
+    * [Excel - Xls](chapter/201-excel-xls.md)
+    * [Excel - Xlsx](chapter/202-excel-xlsx.md)
 * [数据库操作](chapter/250-db.md)
 * [Http Client](chapter/300-http-client.md)
+    * [Http Response](chapter/305-http-response.md)
 * [Http Server](chapter/350-http-server.md)
+    * [Http Request](chapter/355-http-request.md)
+    * [Server Response](chapter/360-server-response.md)
 
 
 

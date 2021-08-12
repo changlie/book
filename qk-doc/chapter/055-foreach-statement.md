@@ -1,5 +1,8 @@
 # foreach 遍历
 
+`foreach`, `fori`, `forv` 同属一个类型，`fori`, `forv`为更方便而提供。  
+只有`String`, `JSONObject`, `JSONArray`三种类型可以使用`foreach`
+
 ## foreach 键值遍历
 ```js
 println("array test..")

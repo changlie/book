@@ -97,6 +97,6 @@ foreach i, item : arr {
 | 方法 |	描述   |
 |  ----  | ----  |
 |  size()         | 数组元素数量 |
-|  add(elem)      |  添加元素 |
+|  add(elem...)   |  添加元素,允许同时添加多个 |
 |  remove(index)  |  移除元素 |
-|  join(seperator)   |  根据指定字符，将数组所有元素拼接成字符串 |
+|  join(seperator)|  根据指定字符，将数组所有元素拼接成字符串 |

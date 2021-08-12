@@ -138,10 +138,11 @@ println("title: ", s.title()) // title:  Hello World
 println("upperFirst: ", s.upperFirst()) // upperFirst:  Hello world    
 println("contain: ", s.contain("wo"), s.contain("jk")) // contain:  true false  
 
-s = "hellO"
-println(s.eic("hello")) // true
-println(s.eic("hellO")) // true
-println(s.eic("hell0")) // false
+s = "helle"
+println(s.eic("helle")) // true
+println(s.eic("heLLE")) // true
+println(s.eic("heiie")) // false
+println(s.eic("hei")) // false
 
 println("====================")
 println(s.hasPrefix("he")) // true
