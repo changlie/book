@@ -21,6 +21,7 @@
 * [异步编程](chapter/075-asynchronize.md)
 * [正则表达式](chapter/080-regular-expression.md)
 * [文件操作](chapter/090-file.md)
+    * [内置根路径变量](chapter/092-file-path.md)
 * [日期时间](chapter/150-date-time.md)
 * [Excel操作](chapter/200-excel.md)
     * [Excel - Xls](chapter/201-excel-xls.md)

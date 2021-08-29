@@ -16,7 +16,16 @@ println(resp.string())
 ```
 
 ### POST 请求
-1. xhr 传json对象 (Content-Type: application/json)
+
+Quick专门为POST请求内置了一变量`mime`, 其包含了POST常用的Content-Type:
+```
+mime.json => application/json
+mime.form => application/x-www-form-urlencoded
+mime.data => multipart/form-data
+```
+
+- xhr 传json对象 (Content-Type: application/json)
+
 ```js
 url = "http://localhost:12345/hello?from=qk"
 resp = httpPost(url, {type:mime.json,
@@ -29,7 +38,8 @@ resp = httpPost(url, {type:mime.json,
 })
 ```
 
-2. form表单默认方式 (Content-Type: application/x-www-form-urlencoded)
+- form表单默认方式 (Content-Type: application/x-www-form-urlencoded)
+
 ```js
 resp = httpPost(url, {type:mime.form,
     headers:{trace:"witch"}, // 添加头信息
@@ -39,9 +49,11 @@ resp = httpPost(url, {type:mime.form,
         addr:"中国"
     }
 })
-```
+```     
 
-3. 文件上传 (Content-Type: multipart/form-data)
+
+- 文件上传 (Content-Type: multipart/form-data)
+
 ```js
 descBytes = fbytes("README.md")
 versionBytes = fbytes("version.go")

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <style>
+            * {padding: 0px;margin: 0px;}
+            body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background: black;
+            }
+            
+            .neon {
+                color: #cce7f8;
+                font-size: 2.5rem;
+                animation: shining 1s ease 0s infinite alternate;
+            } 
+            
+            @keyframes shining {
+                from {
+                text-shadow: 0 0 2px rgba(182, 211, 207, 0.9),
+                    0 0 30px rgba(182, 211, 207, 0.3), 0 0 12px rgba(15, 115, 223, 0.5),
+                    0 0 21px rgba(15, 115, 223, 0.9), 0 0 34px rgba(15, 115, 223, 0.8),
+                    0 0 54px rgba(15, 115, 223, 0.9);
+                }
+                to {
+                text-shadow: 0 0 12px rgba(182, 211, 207, 1),
+                    0 0 30px rgba(182, 211, 207, 0.4), 0 0 12px rgba(15, 115, 223, 0.6),
+                    0 0 22px rgba(15, 115, 223, 0.8), 0 0 38px rgba(15, 115, 223, 0.9),
+                    0 0 60px rgba(15, 115, 223, 1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="neon">这是个霓虹灯效果</div>
+        <script>
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <style>
+            * {padding: 0px;margin: 0px;}
+
+            body{
+                margin-left: 100px;
+            }
+            
+            .demo1:before{
+                content: 'in before';
+            }
+            .demo1:after{
+                content: 'in after';
+            }
+            .triangle {
+                width: 0;
+                height: 0;
+                border:50px solid transparent; /*这里我们将元素的边框宽度设置为50px，transparent表示边框颜色是透明的，solid表示边框是实线的*/
+                border-top-color: black;  /*这里我们仅将上边框的颜色设置为黑色，众所周知，css后面的样式代码会覆盖之前的相同的样式代码，至于其他三边的还是透明色*/
+            }
+            .test-div {
+                position: relative;
+                width: 150px;
+                height: 36px;
+                border-radius: 5px;
+                border: black 1px solid;
+                background: rgb(130, 134, 252)
+            }
+            .test-div:before, .test-div:after { 
+                content: "";
+                display: block;
+                position: absolute;
+                top: 8px;
+                width: 0px;
+                height: 0px;
+                border: 10px solid transparent;
+                
+            }
+            .test-div:before {
+                left: -20px; 
+                border-right-color: rgb(130, 134, 252);
+                z-index: 1;
+            }
+            .test-div:after { 
+                left: -21px; 
+                border-right-color: rgba(0, 0, 0, 1);
+                z-index: 0;
+            }
+
+            .login-dialog{
+                position: relative;
+                width: 300px;
+                height: 120px;
+                padding: 20px 10px;
+                font-weight: bold;
+                z-index: 1;
+            }
+            .login-dialog:before {
+                position: absolute;
+                content: "";
+                top:0px;
+                left:0px;
+                width: 100%;
+                height: 100%;
+                background: rgb(243, 245, 248, 0.5);
+                z-index: -1;
+            }
+        </style>    
+    </head>
+    <body>
+        示例一：<br/>
+        <p class="demo1">it's demo1</p>
+        示例二：<br/>
+        <div class="triangle"></div>
+        示例三：<br/>
+        <div class="test-div"></div>
+        示例四：<br/>
+        <div style="width: 400px;height: 200px;background-image: url('1.jpeg');position: relative;">
+            <div class="login-dialog">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input placeholder="your name" /></td>
+                    </tr> 
+                    <tr>
+                        <td>Password</td>
+                        <td><input placeholder="your password" /></td>
+                    </tr> 
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="login" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script>
+
+        </script>
+    </body>
+</html>

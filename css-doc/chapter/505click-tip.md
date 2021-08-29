@@ -1,0 +1,56 @@
+# 点击提示效果
+
+<a href="demo/005click-tip.html" target="_blank">查看效果</a>
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>click tip</title>
+       <style>
+           * {padding: 0px;margin: 0px;}
+           body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background: #aaa;
+            }
+
+            @keyframes wave {
+                50%,
+                75% {
+                    transform: scale(2.5);
+                }
+
+                80%,
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            .icon {
+                display: flex;
+                margin-left:30px;
+                width: 30px;
+                height: 30px;
+                margin: 0.8em;
+                border-radius:50%;
+                background: #0f52ba;
+            }
+            .icon::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                border-radius: inherit;
+                animation: wave 2s ease-out infinite;
+                animation-delay:  0.2s;
+            }
+       </style> 
+    </head>
+    <body>
+        <div class="icon"></div>
+    </body>
+</html>
+```

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title></title>
+        <style>
+            * {padding: 0px;margin: 0px;}
+            body {
+                height: 100vh;
+                background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+                overflow: hidden;
+                filter: drop-shadow(0 0 10px white);
+            }
+
+            .snow {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: white;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="skybg"></div>
+<script>
+    window.onload = function() {
+        // 添加200个　<div class="snow"></div>
+        for (var i=0; i<200; i++) {
+            var div = document.createElement("div")
+            div.setAttribute("class", "snow")
+            document.getElementById("skybg").appendChild(div)
+        }
+    }
+
+    function percentage(raw) {
+        if (!raw) {
+            return
+        }
+        pr = parseInt(raw * 100)
+        return `${pr}%`
+    }
+    function random(max) {
+        if (!max) {
+            return Math.random()
+        }
+        return parseInt(Math.random() * max)
+    }
+    function randomRange(min, max) {
+        var rd = random()
+        var res = min + Math.floor(rd * ((max - min) + 1))
+        // debugger
+        return res
+    }
+    function createStyleSheet() {
+        var style = document.createElement('style');
+        style.appendChild(document.createTextNode(""));
+        document.head.appendChild(style);
+        return style.sheet;
+    }
+    var stylesheet = createStyleSheet();
+
+    var total = 200
+    var cssStyleCount = 0
+    for (var i =1; i <=total; i++) {
+        var randomX =  random(1000000) * 0.0001;
+        var randomOffset = randomRange(-100000, 100000) * 0.0001;
+        var randomXEnd = randomX + randomOffset;
+        var randomXEndYoyo = randomX + (randomOffset / 2);
+        var randomYoyoTime = randomRange(30000, 80000) / 100000;
+        var randomYoyoY = randomYoyoTime * 100;
+        var randomScale = random(10000) * 0.0001;
+        var fallDuration = randomRange(10, 30) * 1 + "s";
+        var fallDelay = (random(30) * (-1)) + "s";
+        var opacityVal = random(10000) * 0.0001;
+        // debugger
+        var chcss = `
+            .snow:nth-child(${i}) {
+                opacity: ${opacityVal};
+                transform: translate(${randomX}vw, -10px) scale(${randomScale});
+                animation: fall-${i} ${fallDuration} ${fallDelay} linear infinite;
+            }
+        `
+        stylesheet.insertRule(chcss, cssStyleCount);  //DOM方法
+        cssStyleCount ++
+
+        var startPercent = percentage(randomYoyoTime)
+        var aniCss = `
+            @keyframes fall-${i} {
+                ${startPercent} {
+                    transform: translate(${randomXEnd}vw, ${randomYoyoY}vh) scale(${randomScale});
+                }
+
+                to {
+                    transform: translate(${randomXEndYoyo}vw, 100vh) scale(${randomScale});
+                }
+            }
+        `
+        stylesheet.insertRule(aniCss, cssStyleCount);  //DOM方法
+        cssStyleCount ++
+    }
+    
+</script>
+    </body>
+</html>
