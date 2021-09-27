@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>太极图</title>
+        <style>
+            * {padding: 0px;margin: 0px;}
+            .box {
+                width: 900px;
+                height: 800px;
+                margin: 50px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: skyblue;
+                box-sizing: border-box;
+            }
+
+            .yinyang {
+                width: 600px;
+                height: 600px;
+                background-color: #fff;
+                box-sizing: border-box;
+                border: solid 10px #000;
+                border-bottom-width: 300px;
+                border-radius: 100%;
+                position: absolute;
+                transform:scale(0.65);
+                z-index: 7;
+                animation: yinyangRatote 10s linear 0s infinite;
+            }
+            .yinyang::before {
+                content: '';
+                display: block;
+                width: 290px;
+                height: 290px;
+                box-sizing: border-box;
+                background-color: white;
+                border: solid 110px black;
+                position: absolute;
+                left: 0px;
+                top: 150px;
+                border-radius: 100%;
+            }
+            .yinyang::after {
+                content: '';
+                display: block;
+                width: 290px;
+                height: 290px;
+                box-sizing: border-box;
+                background-color: black;
+                border: solid 110px white;
+                position: absolute;
+                right: 0px;
+                top: 155px;
+                border-radius: 100%;
+            }
+
+            @keyframes yinyangRatote {
+                from {transform: scale(0.65) rotate(0deg);}
+                to {transform: scale(0.65) rotate(360deg);}
+            }
+
+            .bg-black {
+                width: 600px;
+                height: 200px;
+                background-color: black;
+                position: relative;
+            }
+            .bg-black::before {
+                content: '';
+                width: 600px;
+                height: 200px;
+                box-sizing: border-box;
+                border-bottom: solid 200px black;
+                border-left: solid 200px transparent;
+                border-right: solid 200px transparent;
+                position: absolute;
+                top: -200px;
+                left: 0;
+            }
+            .bg-black::after {
+                content: '';
+                width: 600px;
+                height: 200px;
+                box-sizing: border-box;
+                border-top: solid 200px black;
+                border-left: solid 200px transparent;
+                border-right: solid 200px transparent;
+                position: absolute;
+                bottom: -200px;
+                left: 0;
+            }
+
+            .bg-white {
+                width: 570px;
+                height: 190px;
+                background-color: white;
+                position: absolute;
+            }
+            .bg-white::before {
+                content: '';
+                width: 570px;
+                height: 190px;
+                box-sizing: border-box;
+                border-bottom: solid 190px white;
+                border-left: solid 190px transparent;
+                border-right: solid 190px transparent;
+                position: absolute;
+                top: -190px;
+                left: 0;
+            }
+            .bg-white::after {
+                content: '';
+                width: 570px;
+                height: 190px;
+                box-sizing: border-box;
+                border-top: solid 190px white;
+                border-left: solid 190px transparent;
+                border-right: solid 190px transparent;
+                position: absolute;
+                bottom: -190px;
+                left: 0;
+            }
+
+            .side {
+                width: 100px;
+                height: 100px;
+                background-color: transparent;
+                position: absolute;
+                z-index: 6;
+
+            }
+
+            .line {
+                width: 90px;
+                box-sizing: border-box;
+                border-left: solid 5px transparent;
+                border-right: solid 5px transparent;
+                border-top: solid 5px black;
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0)
+            }
+
+            .line:nth-child(1) {
+                width: 50px;
+                bottom: 0;
+            }
+
+            .line:nth-child(2) {
+                width: 70px;
+                bottom: 15px;
+            }
+
+            .line:nth-child(3) {
+                bottom: 30px;
+            }
+
+            .seperator::after {
+                content: '';
+                display: block;
+                background-color:white;
+                width: 8px;
+                height: 12px;
+                position: absolute;
+                left: 50%;
+                top: -12px;
+                margin-left: -4px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="yinyangBox" class="box">
+            <div class="side">
+                <div class="line"></div>
+                <div class="line seperator"></div>
+                <div class="line"></div>
+            </div>
+            <div class="side">
+                <div class="line seperator"></div>
+                <div class="line seperator"></div>
+                <div class="line seperator"></div>
+            </div>
+            <div class="side">
+                <div class="line seperator"></div>
+                <div class="line seperator"></div>
+                <div class="line"></div>
+            </div>
+            <div class="side">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line  seperator"></div>
+            </div>
+            <div class="side">
+                <div class="line seperator"></div>
+                <div class="line"></div>
+                <div class="line seperator"></div>
+            </div>
+            <div class="side">
+                <div class="line"></div>
+                <div class="line seperator"></div>
+                <div class="line seperator"></div>
+            </div>
+            <div class="side">
+                <div class="line seperator"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="side">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="yinyang"></div>
+            <div class="bg-black"></div>
+            <div class="bg-white"></div> 
+            
+        </div>
+
+        <script>
+            var customStyle = document.createElement("style")
+            customStyle.appendChild(document.createTextNode(""));
+            document.head.appendChild(customStyle);
+
+            // var box = document.getElementById("yinyangBox")
+            // var boundary = document.getElementById('side-boundary')
+            for (var i=0; i<8; i++) {
+                var childIndex = i+1
+                var degVal = i * 45;
+                var axisY = i%2==0 ? 280 : 270;
+                // axisY = 300
+                customStyle.sheet.insertRule(`
+                    .side:nth-child(${childIndex}) {
+                        transform: rotate(${degVal}deg) translateY(-${axisY}px);
+                    }
+                `, 0)
+
+                // var sideElem = document.createElement("div")
+                // sideElem.setAttribute("class", "side")
+                // box.insertBefore(sideElem, boundary)
+            }
+        </script>
+    </body>
+</html>

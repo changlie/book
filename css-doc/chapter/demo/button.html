@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>button demo</title>
+        <style>
+            * {padding: 0px;margin: 0px;}
+
+            body {
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                background: #1A1E23;
+            }
+
+            .btn {
+                position: relative;
+                padding: 1rem 3rem;
+                font-size: 1rem;
+                line-height: 1.5em;
+                color: white;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: 1px solid hsl(187, 100%, 41%);
+                outline: transparent;
+                overflow: hidden;
+                cursor: pointer;
+                user-select: none;
+                white-space: nowrap;
+                transition: 0.25s;
+            }
+
+            .btn:hover {
+                box-shadow: 0 0 25px 18px hsla(190, 22%, 30%, 0.5);
+            }
+
+            .btn:hover:before {
+                transform: translateX(100%);
+            }
+
+            .btn:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(120deg, transparent, hsla(178, 100%, 41%, 0.5), transparent);
+                transform: translateX(-100%);
+                transition: 0.6s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button class="btn">hover me</button>
+    </body>
+</html>

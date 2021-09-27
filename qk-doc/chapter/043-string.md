@@ -125,7 +125,7 @@ foreach i, char : str {
 |  contain(str)  | 是否包含指定字符串  |
 |  hasPrefix(str) | 是否包含相应前缀 |
 |  hasSuffix(str) | 是否包含相应后缀 |
-|  eic(str) | equalsIgnoreCase() 忽略大小写的字符串比较 |
+|  is(str) | 忽略大小写的字符串比较 |
 ```js
 s = "hello world    "
 println("size: ", s.size()) // size:  15

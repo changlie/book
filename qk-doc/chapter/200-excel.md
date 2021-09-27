@@ -3,6 +3,8 @@
 excel文件 实际是一堆xml文件的压缩包
 
 Quick支持对老版xls的读操作，及最新版xlsx文件的读写操作
+* [Excel - Xls](201-excel-xls.md)
+* [Excel - Xlsx](202-excel-xlsx.md)
 
 ### xls 数据读取
 `tab1.xls`文件内容如下：  
