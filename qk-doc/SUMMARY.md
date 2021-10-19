@@ -28,6 +28,9 @@
 * [Http Server](chapter/350-http-server.md)
 * [内置变量](chapter/950-internal-vars.md)
 * [内置函数](chapter/953-internal-funcs.md)
+* [任务调度](chapter/990-crontab.md)
+* [邮件发送](chapter/990-mail.md)
+
 
 
 

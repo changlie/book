@@ -38,16 +38,3 @@ test(a, b, add) {
 
 test(5, 7, $ num1, num2 -> num1 + num2)
 ```
-
-示例三：  
-**当匿名函数定义在JSONObject字面值中，匿名函数会绑定相应的键成为JSONObject对象的一个方法，并可以通过关键字`this`去获取这个JSONObject所有键值**
-```js
-student = {
-    name:"changlie",
-    age:18,
-    show:${
-        println(`my name is ${this.name}, ${this.age} years old.`) // my name is changlie, 18 years old.
-    }
-}
-student.show()
-```

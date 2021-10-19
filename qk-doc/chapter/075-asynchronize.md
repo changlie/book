@@ -66,3 +66,28 @@ async result: 998
 cost:  1501 ms
 ```
 结果是: 用时统计是最后执行的，并且用时1.5s
+
+
+### 跨协程传值
+可以解决一些多协程带来的问题
+
+1. 方法1：传参
+```js
+for i=0; i<100; i++ {
+    async($ num {
+        println(num, i)
+    }, i)
+}
+```
+
+2. 方法2：通过阻塞队列
+```js
+queue = blockList()
+for i=0; i<100; i++ {
+    queue.set(i)
+    async(${
+        num = queue.get()
+        printf("num:%v ; i:%v \n", num, i)
+    })
+}
+```
