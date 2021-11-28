@@ -21,6 +21,7 @@ Quick使用Golang制作完成，相关标准库基本由Golang提供.
 2. 根据表结构生成java实体类, curd sql语句
 3. 网络爬虫  
 4. 搭建简易的web服务  
+5. 替代 `shell/cmd` 脚本   
 等等....
 
 

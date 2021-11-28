@@ -8,7 +8,7 @@ Quick 的判空机制和js是一致的：
 
 相应类型默认值: 
 - Byte Array => null
-- Number => 0
+- Integer/Float => 0
 - Boolean => false
 - String => ""
 - JSON Array => null

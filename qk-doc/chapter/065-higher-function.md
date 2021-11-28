@@ -7,6 +7,15 @@ Quick支持高阶函数，匿名函数。
 golang中用关键字`func`标识一个函数  
 Quick用符号`$`来标识一个匿名函数，非匿名函数无需标识
 
+```
+// way 1
+$ [args...] -> result
+// way 2
+$ [args...] {}
+// way 3
+$ expression
+```
+
 当匿名函数只有一个返回语句时，可以`->`来表示一个`return`标识符，不写`{}`
 ```js
 upper = $ str -> str.upper()

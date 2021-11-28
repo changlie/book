@@ -6,7 +6,7 @@
     * [运算符](chapter/030-operator.md)
     * [数据类型](chapter/040-data-type.md)
         * [Byte Array](chapter/041-byte-array.md)
-        * [Number](chapter/041-number.md)
+        * [Integer/Float](chapter/041-number.md)
         * [Boolean](chapter/042-boolean.md)
         * [String](chapter/043-string.md)
         * [JSON Array](chapter/044-json-array.md)

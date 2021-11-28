@@ -7,7 +7,7 @@
 
 | 函数   |	描述  |
 | ----  | ----  |
-| newBytes | 别名：`newbs`, 创建一个空的字节数组 |
+| newBytes | 别名: `newbs`, 创建一个空的字节数组 |
 
 ```js
 bs = newbs()

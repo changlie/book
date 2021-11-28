@@ -122,7 +122,7 @@ foreach i, char : str {
 |  upper()  | 字符串转大写  |
 |  title()  |  单词首字母转大写 |
 |  upperFirst()  | 首字符转大写  |
-|  contain(str)  | 是否包含指定字符串  |
+|  contain(str)  | 别名: `has`,是否包含指定字符串  |
 |  hasPrefix(str) | 是否包含相应前缀 |
 |  hasSuffix(str) | 是否包含相应后缀 |
 |  is(str) | 忽略大小写的字符串比较 |

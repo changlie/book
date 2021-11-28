@@ -3,6 +3,8 @@
 - print() 普通的标准输出
 - println() 自带换行符的标准输出
 - printf() 格式化的标准输出
+- echo() 是`println()`的别名
+- echof() 函数`printf()`加了个换行
 
 ```js
 println("it's ok?")
@@ -21,7 +23,7 @@ en, yeah!you are right.yark
 ```
 
 ### 格式化占位符
-以下描述适用于内置函数  `printf()`, `fmt()`  
+以下描述适用于内置函数  `printf()`, `fmt()`, `echof()`   
 - `printf()`: 格式化后打印
 - `fmt()`: 格式化后返回一个字符串  
 
