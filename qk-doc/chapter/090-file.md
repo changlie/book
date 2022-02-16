@@ -2,23 +2,35 @@
 
 - [xml文件操作](#xml)  
 
-## 文件操作函数
+## 一般文件读取
+| 函数  | 	描述   |
+|  ----  |  ----  |
+|  fbytes(path) | 别名`fbs`， 文件内容以`ByteArray`形式返回  |
+|  fstr(path)      |   读取整个文本文件的内容  |
+|  flines(path) |   逐行读取整个文件，返回一个字符串数组   |
 
-| 函数  | 别名 |	描述   |
-|  ----  | ----  | ----  |
-|  fbytes(path) | fbs(path) |  文件内容以`ByteArray`形式返回  |
-|  fstr(path)      |  |  读取整个文本文件的内容  |
-|  flines(path)) |  |  逐行读取整个文件，返回一个字符串数组   |
-|  fjson(path)     |  |  读取整个json文件, 返回一个json对象  |
-|  fout(path, content)     |  |  清空指定文件，并写入数据 |
-|  fappend(path, content)  |  |  向指定文件以追加的方式写入数据  |
-|  fsave(path, bytes) |  | 将`ByteArray`数据保存至文件 |
-|  fappendBytes(path, bytes) |  | 将`ByteArray`数据追加至文件 |
-|  fargs(path)  |  |  从参数文件中获取参数  |
-|  fprops(path) |  | 读取配置文件, 返回一个json对象 |
-|  fscan(path)  |  |  获取指定目录下所有文件的绝对路径  |
-|  cp(src, dst)  |  |  文件复制  |
+## 一般文件写入
+| 函数  | 	描述   |
+|  ----  |  ----  |
+|  fsave(path, content)     | 别名`fsv`， 清空指定文件，并写入数据(String/ByteArray) |
+|  fappend(path, content)  |   向指定文件以追加的方式写入数据(String/ByteArray)  |
 
+## 常见配置文件读取  
+| 函数  | 	描述   |
+|  ----  |  ----  |
+|  fjson(path)     |   读取整个json文件, 返回一个json对象  |
+|  fargs(path)  |   从参数文件中获取参数  |
+|  fprops(path) |  读取配置文件, 返回一个json对象 |
+
+## mkdir, ls, rm, mv, cp, fscan  
+| 函数  | 	描述   |
+|  ----  |  ----  |
+|  mkdir(path)  |  创建目录  |
+|  ls(path)  |  当前目录，文件查看  |
+|  rm(path)  |  删除文件或目录  |
+|  mv(src, dst)  |  移动目录，文件； 或重命名目录，文件  |
+|  cp(src, dst)  |  复制目录，文件  |
+|  fscan(dir)  |  获取当前路径下的所有子文件/目录的信息  |
 
 ### 函数 fargs(path)
 参数文件 `/home/xp/ws/test/inputFile` 内容为
@@ -62,7 +74,6 @@ props = fprops("/home/xp/ws/test/aprops")
 println("config -> ", props) // config ->  {"name":"changlie server", "port":"502", "mode":""}
 
 ```
-
 
 
 

@@ -8,8 +8,8 @@ Quick支持对老版xls的读操作，及最新版xlsx文件的读写操作
 
 ### xls 数据读取
 `tab1.xls`文件内容如下：  
-![illustration](../img/xls-src.png)  
-[源文件](../static/tab1.xls)
+![illustration](img/xls-src.png)  
+[源文件](static/tab1.xls)
 ```js
 f = xls("d:/tab1.xls")
 println("xlsSheetNumber:", f.sheetNumber())
@@ -52,8 +52,8 @@ ww, 16, m, xx,
 
 ### xlsx 读取
 `tab2.xlsx`文件内容：
-![illustraction](../img/xlsx-src.png)  
-[源文件](../static/tab2.xlsx)
+![illustraction](img/xlsx-src.png)  
+[源文件](static/tab2.xlsx)
 方式1：
 ```js
 f = xlsx("d:/tab2.xlsx")
@@ -116,8 +116,8 @@ sheet.setCellValue("B2", "boom!")
 f.saveAs("d:/test.xlsx")
 println("write successfully")
 ```
-写出的文件数据如下：
-![illustration](../img/xlsx-res.png)
+写出的文件数据如下：  
+![illustration](img/xlsx-res.png)
 
 
 # Xls 相关对象

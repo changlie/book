@@ -16,6 +16,7 @@
         * [for循环](chapter/052-for-statement.md)
         * [foreach遍历](chapter/055-foreach-statement.md)
     * [自定义函数](chapter/060-function.md)
+    * [变量作用域](chapter/061-var-scope.md)
     * [高阶函数](chapter/065-higher-function.md)
 * [标准输出](chapter/070-standard-output.md)
 * [异步编程](chapter/075-asynchronize.md)
